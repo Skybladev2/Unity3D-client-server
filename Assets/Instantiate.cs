@@ -3,8 +3,7 @@ using System.Collections;
 
 public class Instantiate : MonoBehaviour
 {
-
-    private Transform SpaceCraft = null;
+    public Transform SpaceCraft = null;
 
     // Use this for initialization
     void Start()
