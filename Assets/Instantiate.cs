@@ -48,11 +48,13 @@ public class Instantiate : MonoBehaviour
 		//	Network.Destroy(obj);
 		//}
 
-		//foreach (var obj in objects) {
+		// уничтожаем клиентский объект	
+		Destroy(GameObject.Find("Player(Clone)")); 
+		foreach (var item in GameObject.FindGameObjectsWithTag("ServerObject")) {
+			Destroy(item);	
+		}
 
-			// уничтожаем клиентский объект	
-			Destroy(GameObject.Find("Player(Clone)")); 
-			// уничтожаем себя, но после первого вызова мы не сможем себя создавать
+		// уничтожаем себя, но после первого вызова мы не сможем себя создавать
 			// Network.Instantiate на клиенте перестанет работать
 			//Destroy(gameObject); 
 		//}
